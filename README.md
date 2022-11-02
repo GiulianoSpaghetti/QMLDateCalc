@@ -2,6 +2,8 @@
 
 An application for count how many time remains to a date
 
+[![OpenStore](https://open-store.io/badges/it.svg)](https://open-store.io/app/qmldatecalc)
+
 ## License
 
 Copyright (C) 2022  Giulio Sorrentino
