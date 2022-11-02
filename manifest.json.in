@@ -1,0 +1,15 @@
+{
+    "name": "qmldatecalc",
+    "description": "An application for count how many time remains to a date",
+    "architecture": "@CLICK_ARCH@",
+    "title": "qmldatecalc",
+    "hooks": {
+        "qmldatecalc": {
+            "apparmor": "qmldatecalc.apparmor",
+            "desktop":  "qmldatecalc.desktop"
+        }
+    },
+    "version": "0.1.0",
+    "maintainer": "Giulio Sorrentino <gsorre84@gmail.com>",
+    "framework" : "@CLICK_FRAMEWORK@"
+}
