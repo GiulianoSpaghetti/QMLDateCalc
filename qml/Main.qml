@@ -30,6 +30,10 @@ MainView {
     height: units.gu(75)
 Page {
     title: qsTr("QMLDateCalc")
+    Settings {
+    	id: "settings"
+    	property string data: "2022-12-25"
+    }
     Column{
        		spacing: 30
 	    Row {
@@ -39,7 +43,7 @@ Page {
 	        }
 	        TextEdit {
 	        	id: date
-	        	text: qsTr("2022-12-24")
+	        	text: settings.value("data", "2022-12-25")
 	        }
 	   }
        	   Button {
@@ -50,6 +54,8 @@ Page {
             		var data=actual.getTime()-now;
             	        data=Math.floor(data / (1000 * 3600 * 24));
             		result.text=i18n.tr("There are ") +data+ i18n.tr(" days left.");
+            		settings.setValue("data", date.text);
+            		settings.sync();
             	}
     	  }
     	  Label {
