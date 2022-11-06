@@ -60,8 +60,18 @@ Page {
     	  }
     	  Label {
     	  	id: result
-    	  	text: qsTr("Fatto dal coglione italo-napoletano");
+    	  	text: qsTr("");
     	  }
+    	  Label {
+    	  	text: qsTr("© 2022 Giulio Sorrentino")
+    	  }
+    	  Label {
+    	  	text: qsTr("Sotto licenza GPL v3 o, secondo la tua opinione, qualsiasi\nversione successiva.")
+	  }
+	  Label {
+	  	text: qsTr("Pagina del progetto:\nhttps://github.com/numerunix/qmldatecalc")
+	  }
+    	  
    }
   }
 }
