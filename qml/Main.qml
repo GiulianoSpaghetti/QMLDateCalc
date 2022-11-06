@@ -16,6 +16,7 @@
 
 import QtQuick 2.7
 import Ubuntu.Components 1.3
+import Ubuntu.Components.Pickers 1.0
 //import QtQuick.Controls 2.2
 import QtQuick.Layouts 1.3
 import Qt.labs.settings 1.0
@@ -35,26 +36,25 @@ Page {
     	property string data: "2022-12-25"
     }
     Column{
-       		spacing: 30
-	    Row {
-       		spacing: 10
-	        Label {
-	            text: i18n.tr("Insert the date")
-	        }
-	        TextEdit {
-	        	id: date
-	        	text: settings.value("data", "2022-12-25")
-	        }
+       	   spacing: 30
+       	   Label {
+	        text: i18n.tr("Insert the date")
 	   }
+	
+           DatePicker {
+        	id: datePicker
+        	date: settings.value("data", "2022-12-25")
+        	minimum: new Date( Qt.formatDate("2022-01-01", "yyyy-MM-dd"))
+           }
        	   Button {
             	text: i18n.tr("Calculate");
             	onClicked: {
-            		var actual = new Date( Qt.formatDate(date.text, "yyyy-MM-dd"));
+            		var actual = new Date( Qt.formatDate(datePicker.date, "yyyy-MM-dd"));
             		var now= new Date();
             		var data=actual.getTime()-now;
             	        data=Math.floor(data / (1000 * 3600 * 24));
             		result.text=i18n.tr("There are ") +data+ i18n.tr(" days left.");
-            		settings.setValue("data", date.text);
+            		settings.setValue("data", datePicker.date);
             		settings.sync();
             	}
     	  }
