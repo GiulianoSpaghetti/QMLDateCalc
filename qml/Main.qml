@@ -16,7 +16,7 @@
 
 import QtQuick 2.7
 import Ubuntu.Components 1.3
-import Ubuntu.Components.Pickers 1.0
+import Ubuntu.Components.Pickers 1.3
 //import QtQuick.Controls 2.2
 import QtQuick.Layouts 1.3
 import Qt.labs.settings 1.0
@@ -29,16 +29,37 @@ MainView {
 
     width: units.gu(45)
     height: units.gu(75)
-Page {
-    title: qsTr("QMLDateCalc")
+
+    Page {
+        anchors.fill: parent
+
+        header: PageHeader {
+            id: header
+            title: i18n.tr('qmldatecalc')
+        }
+
     Settings {
     	id: "settings"
     	property string data: "2022-12-25"
     }
-    Column{
+    
+    Rectangle {
+            anchors {
+                top: header.bottom
+                left: parent.left
+                right: parent.right
+                bottom: parent.bottom
+            }
+
+	    Image {
+	            anchors.fill: parent
+	            source: "../assets/Background.jpg"
+   		}	
+    	Column{
        	   spacing: 30
        	   Label {
 	        text: i18n.tr("Insert the date")
+	        color: "white"
 	   }
 	
            DatePicker {
@@ -61,17 +82,22 @@ Page {
     	  Label {
     	  	id: result
     	  	text: qsTr("");
+	        color: "white"
     	  }
     	  Label {
     	  	text: qsTr("© 2022 Giulio Sorrentino")
+	        color: "white"
     	  }
     	  Label {
     	  	text: qsTr("Sotto licenza GPL v3 o, secondo la tua opinione, qualsiasi\nversione successiva.")
+	        color: "white"
 	  }
 	  Label {
 	  	text: qsTr("Pagina del progetto:\nhttps://github.com/numerunix/qmldatecalc")
+	        color: "white"
 	  }
     	  
-   }
+      }
   }
+}
 }
