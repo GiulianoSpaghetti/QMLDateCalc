@@ -12,7 +12,7 @@ execute_process(
 set(QT_IMPORTS_DIR "lib/${ARCH_TRIPLET}")
 
 set(PROJECT_NAME "qmldatecalc")
-set(FULL_PROJECT_NAME "qmldatecalc.numerone")
+set(FULL_PROJECT_NAME "qmldatecalc")
 set(DATA_DIR /)
 set(DESKTOP_FILE_NAME ${PROJECT_NAME}.desktop)
 

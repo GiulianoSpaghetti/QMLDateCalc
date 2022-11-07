@@ -1,8 +1,6 @@
 # qmldatecalc
 
-An application for count how many time remains to a date
-
-[![OpenStore](https://open-store.io/badges/it.svg)](https://open-store.io/app/qmldatecalc)
+A simplate date calculator
 
 ## License
 
