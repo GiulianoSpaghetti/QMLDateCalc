@@ -1,14 +1,14 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the qmldatecalc.numerone package.
+# This file is distributed under the same license as the qmldatecalc package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: qmldatecalc.numerone\n"
+"Project-Id-Version: qmldatecalc\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-02 11:17+0000\n"
-"PO-Revision-Date: 2022-11-02 12:25+0100\n"
+"POT-Creation-Date: 2022-11-07 09:46+0000\n"
+"PO-Revision-Date: 2022-11-07 10:51+0100\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -18,22 +18,22 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "Language: fr\n"
 
-#: ../qml/Main.qml:37
+#: ../qml/Main.qml:38 qmldatecalc.desktop.in.h:1
+msgid "qmldatecalc"
+msgstr "qmldatecalc"
+
+#: ../qml/Main.qml:61
 msgid "Insert the date"
 msgstr "Insérez la date"
 
-#: ../qml/Main.qml:45
+#: ../qml/Main.qml:71
 msgid "Calculate"
 msgstr "Calculer"
 
-#: ../qml/Main.qml:51
+#: ../qml/Main.qml:77
 msgid " days left."
 msgstr " jours."
 
-#: ../qml/Main.qml:51
+#: ../qml/Main.qml:77
 msgid "There are "
 msgstr "Il reste "
-
-#: qmldatecalc.desktop.in.h:1
-msgid "qmldatecalc"
-msgstr "qmldatecalc"
