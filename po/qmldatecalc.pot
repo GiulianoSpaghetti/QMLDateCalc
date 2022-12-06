@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: qmldatecalc\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-07 09:56+0000\n"
+"POT-Creation-Date: 2022-12-06 07:30+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,22 +17,26 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../qml/Main.qml:38 qmldatecalc.desktop.in.h:1
-msgid "qmldatecalc"
-msgstr ""
-
-#: ../qml/Main.qml:61
+#: ../qml/Main.qml:70
 msgid "Insert the date"
 msgstr ""
 
-#: ../qml/Main.qml:71
+#: ../qml/Main.qml:82
 msgid "Calculate"
 msgstr ""
 
-#: ../qml/Main.qml:77
+#: ../qml/Main.qml:88
 msgid " days left."
 msgstr ""
 
-#: ../qml/Main.qml:77
+#: ../qml/Main.qml:88
 msgid "There are "
+msgstr ""
+
+#: ../qml/Main.qml:101 ../qml/Main.qml:108
+msgid "Informations"
+msgstr ""
+
+#: qmldatecalc.desktop.in.h:1
+msgid "qmldatecalc"
 msgstr ""
