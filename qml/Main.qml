@@ -30,28 +30,11 @@ MainView {
     AdaptivePageLayout {
         anchors.fill: parent
         primaryPage: page1
-        layouts: [
-            PageColumnsLayout {
-                when: width > units.gu(80)
-                // column #0
-                PageColumn {
-                    minimumWidth: units.gu(30)
-                    maximumWidth: units.gu(60)
-                    preferredWidth: units.gu(40)
-                }
-            },
-            PageColumnsLayout {
-                when: true
-                PageColumn {
-                    fillWidth: true
-                    minimumWidth: units.gu(10)
-                }
-            }
-        ]
         Page {
-            id: page1
-            title: 'qmldatecalc'
-        
+        	header: PageHeader {
+	            id: page1
+        	    title: 'qmldatecalc'
+        	}
             Settings {
     	id: "settings"
     	property string data: "2022-12-25"
@@ -104,9 +87,10 @@ MainView {
             }
         }
         Page {
-            id: page2
-            title: i18n.tr('Informations')
-        
+            header: PageHeader {
+	            id: page2
+        	    title: i18n.tr('Informations')
+        }
     Image {
             source: "../assets/Background.jpg"
             width: parent.width
