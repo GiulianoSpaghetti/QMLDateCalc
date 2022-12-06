@@ -21,51 +21,62 @@ import Ubuntu.Components.Pickers 1.3
 import QtQuick.Layouts 1.3
 import Qt.labs.settings 1.0
 
+
 MainView {
-    id: root
-    objectName: 'mainView'
     applicationName: 'qmldatecalc'
     automaticOrientation: true
-
-    width: units.gu(45)
-    height: units.gu(75)
-
-    Page {
+    width: units.gu(100)
+    height: units.gu(60)
+    AdaptivePageLayout {
         anchors.fill: parent
-
-        header: PageHeader {
-            id: header
-            title: i18n.tr('qmldatecalc')
-        }
-
-    Settings {
+        primaryPage: page1
+        layouts: [
+            PageColumnsLayout {
+                when: width > units.gu(80)
+                // column #0
+                PageColumn {
+                    minimumWidth: units.gu(30)
+                    maximumWidth: units.gu(60)
+                    preferredWidth: units.gu(40)
+                }
+            },
+            PageColumnsLayout {
+                when: true
+                PageColumn {
+                    fillWidth: true
+                    minimumWidth: units.gu(10)
+                }
+            }
+        ]
+        Page {
+            id: page1
+            title: 'qmldatecalc'
+        
+            Settings {
     	id: "settings"
     	property string data: "2022-12-25"
     }
-    
-    Rectangle {
-            anchors {
-                top: header.bottom
-                left: parent.left
-                right: parent.right
-                bottom: parent.bottom
-            }
-
-	    Image {
-	            anchors.fill: parent
-	            source: "../assets/Background.jpg"
-   		}	
-    	Column{
-       	   spacing: 30
+    Image {
+    	    id: background
+            source: "../assets/Background.jpg"
+            width: parent.width
+            height: parent.height
+    }	
+    ColumnLayout{
+    	   width: parent.width
+    	   height: parent.height
        	   Label {
+       	   	Layout.alignment: Qt.AlignCenter
 	        text: i18n.tr("Insert the date")
-	        color: "white"
+	        color: "black"
+	        Layout.fillWidth: true
 	   }
 	
            DatePicker {
         	id: datePicker
         	date: settings.value("data", "2022-12-25")
         	minimum: new Date( Qt.formatDate("2022-01-01", "yyyy-MM-dd"))
+	        Layout.fillWidth: true
            }
        	   Button {
             	text: i18n.tr("Calculate");
@@ -76,28 +87,50 @@ MainView {
             	        data=Math.floor(data / (1000 * 3600 * 24));
             		result.text=i18n.tr("There are ") +data+ i18n.tr(" days left.");
             		settings.setValue("data", datePicker.date);
-            		settings.sync();
+            		settings.sync;
             	}
+	        Layout.fillWidth: true
     	  }
     	  Label {
     	  	id: result
     	  	text: qsTr("");
 	        color: "white"
+	        Layout.fillWidth: true
     	  }
-    	  Label {
+                Button {
+                    text: i18n.tr("Informations")
+                    onClicked: page1.pageStack.addPageToCurrentColumn(page1, page2)
+                }
+            }
+        }
+        Page {
+            id: page2
+            title: i18n.tr('Informations')
+        
+    Image {
+            source: "../assets/Background.jpg"
+            width: parent.width
+            height: parent.height
+    }	
+            ColumnLayout {
+            Label {
     	  	text: qsTr("© 2022 Giulio Sorrentino")
-	        color: "white"
+	        color: "black"
+	        Layout.fillWidth: true
     	  }
     	  Label {
     	  	text: qsTr("Sotto licenza GPL v3 o, secondo la tua opinione, qualsiasi\nversione successiva.")
-	        color: "white"
+	        color: "black"
+	        Layout.fillWidth: true
 	  }
 	  Label {
 	  	text: qsTr("Pagina del progetto:\nhttps://github.com/numerunix/qmldatecalc")
-	        color: "white"
+	        color: "black"
+	        Layout.fillWidth: true
+	  }
 	  }
     	  
       }
-  }
+   }
 }
-}
+
