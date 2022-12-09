@@ -2,6 +2,9 @@
 
 Un countdown in puro QML
 
+# Download
+[![OpenStore](https://open-store.io/badges/it.png)](https://open-store.io/app/qmldatecalc)
+
 # Traduzioni
 Aprire il file QMLDateCalc.pot col poedit e divertitevi a tradurre ogni cosa che c'è in quel file.
 A quest punto bisogna salvare il file e riavviare la compilazione con click.
