@@ -53,11 +53,11 @@ MainView {
                 bottom: parent.bottom
             }
     	   width: parent.width
-	   height: 2000    	   
+	   height: page1.contentHeight   	   
 
        	   Label {
 	        text: i18n.tr("Insert the date")
-	        color: "black"
+	        color: "white"
 	        Layout.fillWidth: true
 	   }
 	
@@ -110,7 +110,7 @@ MainView {
                 bottom: parent.bottom
             }
     	   width: parent.width
-	   height: 2000    	   
+	   height: page2.contentHeight   	   
             Label {
     	  	text: qsTr("© 2022 Giulio Sorrentino")
 	        color: "black"
