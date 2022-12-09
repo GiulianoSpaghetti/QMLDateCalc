@@ -25,14 +25,14 @@ import Qt.labs.settings 1.0
 MainView {
     applicationName: 'qmldatecalc'
     automaticOrientation: true
-    width: units.gu(100)
-    height: units.gu(60)
+    width: units.gu(45)
+    height: units.gu(75)
     AdaptivePageLayout {
         anchors.fill: parent
         primaryPage: page1
         Page {
+                id: page1
         	header: PageHeader {
-	            id: page1
         	    title: 'qmldatecalc'
         	}
             Settings {
@@ -46,10 +46,16 @@ MainView {
             height: parent.height
     }	
     ColumnLayout{
+    	   anchors {
+                top: header.bottom
+                left: parent.left
+                right: parent.right
+                bottom: parent.bottom
+            }
     	   width: parent.width
-    	   height: parent.height
+	   height: 2000    	   
+
        	   Label {
-       	   	Layout.alignment: Qt.AlignCenter
 	        text: i18n.tr("Insert the date")
 	        color: "black"
 	        Layout.fillWidth: true
@@ -87,8 +93,8 @@ MainView {
             }
         }
         Page {
-            header: PageHeader {
 	            id: page2
+            header: PageHeader {
         	    title: i18n.tr('Informations')
         }
     Image {
@@ -97,6 +103,14 @@ MainView {
             height: parent.height
     }	
             ColumnLayout {
+	    anchors {
+                top: header.bottom
+                left: parent.left
+                right: parent.right
+                bottom: parent.bottom
+            }
+    	   width: parent.width
+	   height: 2000    	   
             Label {
     	  	text: qsTr("© 2022 Giulio Sorrentino")
 	        color: "black"
@@ -104,12 +118,12 @@ MainView {
     	  }
     	  Label {
     	  	text: qsTr("Sotto licenza GPL v3 o, secondo la tua opinione, qualsiasi\nversione successiva.")
-	        color: "black"
+	        color: "white"
 	        Layout.fillWidth: true
 	  }
 	  Label {
 	  	text: qsTr("Pagina del progetto:\nhttps://github.com/numerunix/qmldatecalc")
-	        color: "black"
+	        color: "white"
 	        Layout.fillWidth: true
 	  }
 	  }
