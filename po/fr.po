@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: qmldatecalc\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-12-06 07:18+0000\n"
-"PO-Revision-Date: 2022-12-06 08:29+0100\n"
+"PO-Revision-Date: 2022-12-09 15:59+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -35,8 +35,6 @@ msgid "There are "
 msgstr "Il reste "
 
 #: ../qml/Main.qml:100
-#, fuzzy
-#| msgid "Informazioni"
 msgid "Informations"
 msgstr "Informations"
 
