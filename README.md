@@ -23,6 +23,3 @@ You should have received a copy of the GNU General Public License along with thi
 # Donazione
 
 http://numerone.altervista.org/donazioni.php
-
-# Bibliografia
-https://phone.docs.ubuntu.com/en/apps/api-qml-current/Ubuntu.Components.AdaptivePageLayout
